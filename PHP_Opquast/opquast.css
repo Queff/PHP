@@ -1,0 +1,17 @@
+h1{
+	text-align: center;
+	text-decoration: underline;
+}
+button{
+	position: absolute;
+	left: 37%;
+	bottom: 45%;
+	font-size: 40px;
+	font-weight: bold;
+	background: black;
+	border: none;
+	border-radius: 10px;
+}
+body{
+	background-color:  	#FFF8DC;
+}
