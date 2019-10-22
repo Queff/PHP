@@ -5,19 +5,23 @@
   <title>CV Quentin</title>
  <style>
  	p{
- 		text-align: center;
+ 		font-size: 14px;
+ 		color: white;
  		font-weight: bold;
- 		text-decoration: justify;
+ 		text-align: justify;
+ 		margin-left: 420px;
+
  	}
  </style>
 </head>
 <body>
 
-	 <p>2011 Licence de Médiation Culturelle Paris V Paris <br>
-	 2010 BTS Communication, en alternance Ecole Xyz Lyon <br>
-     2008-2010 BTS Communication, en alternance Ecole Xyz Lyon <br>
-     2008 Baccalauréat Littéraire Lycée Abcd Grenoble <br>
-     Option Arts Plastiques, mention AB</p>
+	 <p>- 2019-2020 Formation Développeur Web ( SIMPLON )<br><br>
+	 	- 2018-2019 Cours en ligne "Languages indormatiques"<br>
+	 	(HTML / CSS / JAVASCRIPT)<br><br>
+	 	- 2012 BTS Management des unitès commerciales <br><br>
+	 	- 2010 BAC Economique et social <br>
+     </p>
 
 
 

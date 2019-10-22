@@ -1,5 +1,5 @@
 <?php
-include ('BDD.php');
+	include ('BDD.php');
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -19,9 +19,9 @@ include ('BDD.php');
 	</form>
 
 			<h2> Vous n'êtes pas inscrit ? <a href="inscription.php">Cliquer Ici</a></h2>
+		<?php
 
-			<?php
-				if(isset($_POST['submit'])) {
+			if(isset($_POST['submit'])) {
 					if($firstname == 'quentin' and $name == 'queffurus' and $mail == 'quentin.quef@gmail.com'){
 					header('Location: cv.php');
 				}
@@ -29,10 +29,7 @@ include ('BDD.php');
 					echo "Me la fais pas à l'envers !";
 				}
 			}
-
-			?>
-
-
+		?>
                 
 </body>
 </html>

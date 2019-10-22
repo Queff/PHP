@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>CV Quentin</title>
   <link rel="stylesheet" href="cv.css">
+
 </head>
 <body>
 
@@ -14,17 +15,24 @@
 	</div>
     
     <div class="menu">
-    <nav>
-     	<ul>
-     	<li><a href="">Parcours Professionel</a></li>
-     	<li><a href="?call_formation">Formation</a></li>
-     	<li><a href="">Passion / Hobbies</a></li>
+    
+    <ul>
+     	<div class="parcours"><li><a href="?call_pro">Parcours Professionel</a></li></div>
+     	<div class="formation"><li><a href="?call_formation">Formation</a></li></div>
+     	<div class="passion"><li><a href="?call_passion">Passion / Hobbies</a></li></div>
 		</ul>
-	</nav>
-  </div>
+	   
+      </div>
+
       <?php
+          if (isset($_GET['call_pro'])){
+            include('pro.php');
+          }
           if (isset($_GET['call_formation'])){
             include('formations.php');
+          }
+          if (isset($_GET['call_passion'])){
+            include('passion.php');
           }
 
       ?>

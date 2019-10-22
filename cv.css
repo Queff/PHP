@@ -1,19 +1,31 @@
+body{
+	background-color: black;
+}
+h1{
+	margin-left: 35%;
+}
+h3{
+	margin-left: 45%;
+}
+.parcours{
+	border: 3px solid white;
+}
+.formation{
+	border: 3px solid white;
+}
+.passion{
+	border: 3px solid white;
+}
 .name{
+	color: white;
+}
+.menu{
+	display: flex;
 	text-align: center;
-}
-ul {
-
-	width: 100%;
+	font-weight: bold;
 	list-style: none;
-	text-align: left;
-}
-nav li{
-	margin: 0px;
-	padding-top: 50px;
-	padding-left: 110px;
-	width: 140px;
-	height: 60px;
-	display: inline-block;
+	border: 5px solid white;
+	height: 120px;
 }
 a{
 	color: red;
