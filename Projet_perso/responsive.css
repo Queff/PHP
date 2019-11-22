@@ -1,0 +1,90 @@
+@media all and (min-width: 250px) and (max-width: 750px){
+body{
+  margin: 0
+}
+.nav > .nav-btn { /*Bouton menu*/
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+  top: 0px
+}
+.nav > .nav-btn > label { /*Bouton menu*/
+  display: inline-block;
+  height: 55px;
+  padding: 12px
+}
+.nav > .nav-btn > label > span { /* Trait blanc bouton menu*/
+  display: block;
+  width: 25px;
+  height: 10px;
+  border-top: 2px solid #eee
+}
+.nav > .nav-links {
+  position: absolute;
+  width: 50%;
+  background-color: #413F4A;
+  height: 0px;
+  overflow-y: hidden;
+  top: 55px;
+  z-index: 60;
+  margin-left: 50%
+}
+.nav > .nav-links > a {
+  display: block;
+  width: 50%;
+  margin: 0
+}
+.nav > #nav-check:checked ~ .nav-links { /*menu deroulant*/
+  height: calc(30vh - 20px);
+  overflow-y: auto
+}
+.external{
+  margin: 0
+}
+.simplon{
+  width: 30%;
+  height: 110px;
+  margin-left: 30px
+}
+.slide{
+  padding: 20vh 1%
+}
+#title{
+  padding-top: 46%
+}
+.title h1{
+  font-size: 18px;
+  padding: 2px
+}
+#presentation p{
+    font-size: 16px
+}
+#slide2 .title{
+  height: 500px
+}
+#pro ul{
+  padding-left: 11px
+}
+.h3{
+  font-size: 14px;
+}
+.js{
+  height: 70px;
+  font-weight: bold;
+}
+.js a{
+  font-size: 18px;
+}
+#skills1{
+  padding-left: 8px
+}
+.language{
+  position: relative;
+  bottom: 10px
+}
+.slide5{
+  font-size: 16px;
+  font-weight: bold;
+  height: 45px
+}
+}
