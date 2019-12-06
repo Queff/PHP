@@ -33,7 +33,11 @@
         var pwd1 = document.getElementById("pwd1");
         var pwd2 = document.getElementById("pwd2");
         var sex = document.getElementById("sex");
-
+        var regex = /^(((0[1-9]|[12]\d|3[01])\/(0[13578]|1[02])\/((19|[2-9]\d)\d{2}))|((0[1-9]|[12]\d|30)\/(0[13456789]|1[012])\/((19|[2-9]\d)\d{2}))|((0[1-9]|1\d|2[0-8])\/02\/((19|[2-9]\d)\d{2}))|(29\/02\/((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))))$/g;
+        var txt = document.getElementById("age").value;
+        var regexmail = /^[-+.\w]{1,64}@[-.\w]{1,64}\.[-.\w]{2,6}$/i;
+        var mail = document.getElementById("email").value;
+       
 
         //   les pseudos  "dieu" , "root" et "admin" sont déjà utilisés 
         if (pseudo.value == "dieu" || pseudo.value == "root" || pseudo.value == "admin"){
@@ -55,7 +59,11 @@
         {
              email.className = "correct";
         }
-            
+        if (!(regexmail.test(mail)))
+        {
+            erreur = "Email incorrecte ou mauvais format de l'email";
+            age.className = "incorrect";
+        } 
         // Si le mot de passe et sa confirmation sont différents une erreur est envoyée
         if (pwd1.value != pwd2.value)
         {
@@ -87,28 +95,29 @@
             email.className = "incorrect";
         }
         //Si la date de naissance n'est pas renseignée une erreur est envoyée
-        if (!age.value || age.value.length != 10 )
+        if (!age.value)
         {
             erreur = "Veuillez renseigner une date de naissance valide au format JJ/MM/AAAA";
-            document.getElementById('Age').value = "ERREUR";
             age.className = "incorrect";
         }
         else
         {
             age.className = "correct";
         }
-        if (Age.value>= 18)
+        if (!(regex.test(txt)))
         {
-            age.className = "correct";
-        }
-        else
-        {
-            erreur = "Vous êtes mineur";
+            erreur = "Date incorrecte ou mauvais format de date";
             age.className = "incorrect";
         }
+        if (Age.value< 18)
+        {
+            age.className = "incorrect";
+            erreur = "Vous devais être majeur pour s'inscrire sur ce site";
+        }
+        
         if (Age.value< 0)
         {
-            erreur = "Vous êtes pas nés";
+            erreur = "Vous êtes pas nés??";
             age.className = "incorrect";
         }
         //Si le prenom est vide une erreur est envoyée
@@ -147,12 +156,11 @@
         // Si toutes les conditions sont réunis le formulaire est envoyé 
         else 
         {
-            alert("Formulaire envoyé");
+            document.getElementById("erreur").innerHTML = "";
+            alert("Formulaire envoyé\nUn email vous a été envoyé\npour confirmer l'inscription");
             window.location = "index1.html"; 
         }
 
-
-
     });
 
-
+    

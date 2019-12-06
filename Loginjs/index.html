@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Formulaire Javascript</title>
   <link rel="stylesheet" href="style.css">
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 
 <body>
@@ -25,12 +25,12 @@
         <br /><br />
 
         <label class="form_col" for="age">Date de naissance :</label>
-        <input name="age" id="age" class="age" type="text" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])/(0[1-9]|1[012])/[0-9]{4}" placeholder="jj/mm/aaaa" Onblur="CalculAge()">
-        <label>Age:</label> <input type="text" name="age" id="Age">
+        <input name="age" id="age" class="age" type="text" placeholder="jj/mm/aaaa" Onblur="CalculAge()">
+        <input type="text" name="age1" id="Age">
         <br /><br />
 
         <label class="form_col" for="email">Email :</label>
-        <input name="email" id="email" type="email" placeholder="mail@serveur.com">
+        <input name="email" id="email" type="text" placeholder="mail@serveur.com">
         <br /><br />
 
         <label class="form_col" for="pwd1">Mot de passe :</label>
@@ -48,7 +48,9 @@
         <br /><br />
 
         <span class="form_col"></span>
-        <input type="submit" id="submit" value="M'inscrire"> <input type="reset" value="Réinitialiser le formulaire">
+        <input type="submit" id="submit" value="M'inscrire">
+        <input type="reset" value="Réinitialiser le formulaire">
+        <p id="send"></p>
 
     </form>
 
