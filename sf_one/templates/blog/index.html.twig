@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+/*<style>
+.card{
+	width: 300px;
+	margin-top: 150px;
+	margin-left: 40px;
+
+}
+</style>
+
+{# <div class="row justify-content-center">
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Categorie 1</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Categorie 1</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="{{ path('category') }}" class="card-link">Articles</a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Categorie 2</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Categorie 2</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Articles</a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Categorie 3</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Categorie 3</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Articles</a>
+  </div>
+</div>
+</div> #}
+
+<section class="articles">
+
+{% for article in articles %}
+  {% if article.category.id == 7 %}
+    <h1>Catégorie 1</h1>
+      <article>
+          <h2>{{ article.title }}</h2>
+        <div class="metadata">Ecrit le {{ article.createdAt | date('d/m/Y') }} à {{ article.createdAt | date('H:i') }} dans la catégorie {{ article.category.title }}</div>
+          <div class="content">
+          <img src="{{ article.image }}" alt="#">
+          {{ article.content | raw }}
+          <a href="{{ path('blog_show', {'id': article.id}) }}" class="btn-primary">Lire la suite</a>
+        </div>
+    </article>
+  {% endif %}
+
+{% endfor %}
+
+</section>
+
+{% endblock %}

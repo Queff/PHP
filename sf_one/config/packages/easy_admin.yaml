@@ -1,0 +1,14 @@
+easy_admin:
+   entities:
+    Articles:
+      class : App\Entity\Articles
+    Category:
+      class: App\Entity\Category
+      Comment:
+        class: App\Entity\Comment
+      User:
+        class: App\Entity\User
+       # List the entity class name you want to manage
+       # - App\Entity\Product
+       # - App\Entity\Category
+       # - App\Entity\User
